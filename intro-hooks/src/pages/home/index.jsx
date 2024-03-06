@@ -20,26 +20,29 @@ class Home extends React.Component{
     }
   }
 
-  // componentDidMount(){
-  //   alert('Component Did Mount RUNNING!')
-  // }
-
   componentWillUnmount(){
     alert(hobby)
   }
 
+  componentDidMount(){
+    console.log('Component Did Mount RUNNING!')
+  }
+
   onUpdateUsername = () => {
-    this.setState({username: 'Ryan'})
+    // this.setState({username: 'Ryan'})
     hobby = 'Minum'
   }
 
   render(){
+    console.log('Render')
     return(
       <h1>
         This is Home Component
+        <br />
         <Link to='/login'>
           Go to Login 
-        </Link> 
+        </Link>
+        <br /> 
         <h2>
           {this.state.username}
         </h2>
