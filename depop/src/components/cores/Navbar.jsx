@@ -47,7 +47,7 @@ export default function Navbar(){
                 <button className="btn rounded-none bg-black text-white hover:bg-gray-500 hidden lg:block">
                         Sell Now
                 </button>
-                <button className="btn rounded-none bg-black text-white hover:bg-gray-500 lg:bg-white text-black border border-black hover:border-black">
+                <button className="btn rounded-none bg-black text-white hover:bg-gray-500 lg:bg-white lg:text-black border border-black hover:border-black">
                         Sign Up
                 </button>
                 <button className="rounded-none bg-white text-black text-lg font-bold hover:text-gray-500 hidden lg:block">

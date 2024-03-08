@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar />
       <div
-        className="py-64"
+        className="py-40"
       >
         <Outlet />
       </div>
