@@ -303,6 +303,38 @@
       "email": "ryan@gmail.com",
       "username": "asasaasasa",
       "password": "asasasa"
+    },
+    {
+      "id": "f3cf",
+      "firstName": "Ryan",
+      "lastName": "Defryan",
+      "email": "ryan@gmail.com",
+      "username": "ryan01",
+      "password": "abc123"
+    },
+    {
+      "id": "a076",
+      "firstName": "Ryan",
+      "lastName": "Defryan",
+      "email": "ryan@gmail.com",
+      "username": "ryan01",
+      "password": "abc123"
+    },
+    {
+      "id": "680b",
+      "firstName": "Ryan",
+      "lastName": "Defryan",
+      "email": "ryan@gmail.com",
+      "username": "ryan01",
+      "password": "abc123"
+    },
+    {
+      "id": "cd0f",
+      "firstName": "Ryan",
+      "lastName": "Defryan",
+      "email": "ryan@gmail.com",
+      "username": "ryan01",
+      "password": "abc123"
     }
   ]
 }

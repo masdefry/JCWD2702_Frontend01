@@ -8,13 +8,19 @@ import { useState } from 'react';
 export default function Register(){
     const [isLoading, setIsLoading] = useState(false)
 
-    const onHandleRegister = async(values) => {
+    const onHandleRegister = async(values, resetForm) => {
         try {
             setIsLoading(true)
+            // Step-01: Cek Email Sudah Terdaftar Atau Belum?
+            const findEmail = await axios.get(`http://localhost:5000/users?email=${values.email}`)
+            // findEmail.data berisikan array data apabila emailnya sudah terdaftar
+            // dan akan berisikan array kosong apabila emailnya belum terdaftar
+            if(findEmail.data.length > 0) throw new Error('Email Already Register')
             const res = await axios.post('http://localhost:5000/users', values)
             toast.success('Register Success!')
+            resetForm()
         } catch (error) {
-            console.log(error)
+            toast.error(error.message? error.message : 'Register Failed! Please Try Again!')
         } finally {
             setIsLoading(false)
         }
@@ -31,8 +37,8 @@ export default function Register(){
                     password: ''
                 }}
                 validationSchema={registerSchema}
-                onSubmit={(values) => {
-                    onHandleRegister(values)
+                onSubmit={(values, {resetForm}) => {
+                    onHandleRegister(values, resetForm)
                 }}
            >
             
