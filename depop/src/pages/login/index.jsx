@@ -3,9 +3,12 @@ import { useState } from 'react';
 import { loginSchema } from '../../supports/schema/loginSchema';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useContext } from 'react';
+import { userContext } from '../../supports/context/useUserContext';
 
 export default function LoginPage(){
     const [isLoading ,setIsLoading] = useState(false)
+    const {setUserData} = useContext(userContext)
 
     const onHandleLogin = async(values, resetForm) => {
         try {
@@ -18,8 +21,9 @@ export default function LoginPage(){
             }
             
             if(findEmail.data.length === 0) throw new Error('Login Failed!')
-
+            console.log(findEmail.data[0].username)
             toast.success('Login Success')
+            setUserData(findEmail.data[0].username)
         } catch (error) {
             toast.error(error.message)
         } finally {

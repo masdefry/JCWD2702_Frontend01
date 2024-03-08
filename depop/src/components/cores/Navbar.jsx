@@ -1,9 +1,14 @@
 import { CiSearch, CiHeart, CiMenuBurger  } from "react-icons/ci";
 import { IoBagOutline } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { userContext } from "../../supports/context/useUserContext";
 
 export default function Navbar(){
     const route = useLocation()
+    const {userData} = useContext(userContext)
+    console.log('This is Navbar')
+    console.log(userData)
     
     return(
         <div className="fixed w-full bg-white">
@@ -47,12 +52,19 @@ export default function Navbar(){
                 <button className="btn rounded-none bg-black text-white hover:bg-gray-500 hidden lg:block">
                         Sell Now
                 </button>
-                <button className="btn rounded-none bg-black text-white hover:bg-gray-500 lg:bg-white lg:text-black border border-black hover:border-black">
-                        Sign Up
-                </button>
-                <button className="rounded-none bg-white text-black text-lg font-bold hover:text-gray-500 hidden lg:block">
-                        Login
-                </button>
+                {
+                    userData !== null?
+                        userData
+                    :
+                        <>
+                            <button className="btn rounded-none bg-black text-white hover:bg-gray-500 lg:bg-white lg:text-black border border-black hover:border-black">
+                                    Sign Up
+                            </button>
+                            <button className="rounded-none bg-white text-black text-lg font-bold hover:text-gray-500 hidden lg:block">
+                                    Login
+                            </button>
+                        </>
+                }
                 </div>
             </div>
             <div className="divider"></div>
