@@ -1,15 +1,25 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { registerSchema } from '../../supports/schema/registerSchema';
+import { useState } from 'react';
 
-const registerSchema = Yup.object().shape({
-    firstName: Yup.string().required('Firstname is Required!'),
-    lastName: Yup.string().required('Firstname is Required!'),
-    email: Yup.string().email('Email Must be Valid!').required('Email is Required'),
-    username: Yup.string().min(6, 'Username Must Have Minimum 6 Characters').required('Username is Required'),
-    password: Yup.string().min(6, 'Password Must Have Minimum 6 Characters').required('Password is Required')
-})
 
 export default function Register(){
+    const [isLoading, setIsLoading] = useState(false)
+
+    const onHandleRegister = async(values) => {
+        try {
+            setIsLoading(true)
+            const res = await axios.post('http://localhost:5000/users', values)
+            toast.success('Register Success!')
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+
     return(
         <div className="flex flex-col items-center">
            <Formik
@@ -22,7 +32,7 @@ export default function Register(){
                 }}
                 validationSchema={registerSchema}
                 onSubmit={(values) => {
-                    console.log(values)
+                    onHandleRegister(values)
                 }}
            >
             
@@ -86,12 +96,9 @@ export default function Register(){
                                             style={{ color: 'red' }}
                                         />
                                     </label>
-                                    {
-                                        console.log(dirty) // By Default False
-                                    }
                                     <button type='submit'
                                         className='btn bg-black text-white w-full rounded-none my-3'
-                                        disabled={!(dirty && isValid)}
+                                        disabled={!(dirty && isValid) || isLoading}
                                     >
                                         Register
                                     </button>                    
