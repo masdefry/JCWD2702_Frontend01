@@ -1,340 +1,496 @@
 {
   "users": [
+    
+  ],
+
+  "categories": [
     {
-      "id": "9127",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "ryan01",
-      "password": "abc123"
+      "id": 1,
+      "name": "Jersey"
     },
     {
-      "id": "9a39",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "ryan0101",
-      "password": "abc123"
+      "id": 2,
+      "name": "Shoes"
     },
     {
-      "id": "fc9a",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "ryan0101",
-      "password": "abc123"
+      "id": 3,
+      "name": "Sunglasses"
     },
     {
-      "id": "c873",
-      "firstName": "Abc",
-      "lastName": "Abc",
-      "email": "ryan@gmail",
-      "username": "Abccccc",
-      "password": "abcasasa"
+      "id": 4,
+      "name": "Prom Dress"
+    }
+  ],
+
+
+  "products": [
+    {
+      "id": "1",
+      "name": "Nike Men's Red Shirt",
+      "description": "Classic Manchester United Soccer Jersey Nike, AON",
+      "price": 17.75,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 1
+        },
+        {
+          "size": "M",
+          "stock": 3
+        },
+        {
+          "size": "L",
+          "stock": 10
+        },
+        {
+          "size": "XL",
+          "stock": 10
+        }
+      ],
+      "colors": ["#e01c28", "#1b100a"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/41702125/1784031041_a35ff6c3e839488a87d60e90c20f38b8/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/41702125/1784031095_c1bf863107a14d96ad8b3a084733c3ad/P0.jpg",
+      "condition": "Brand New",
+      "brand": "Nike"
     },
     {
-      "id": "bf79",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "2",
+      "name": "Prada Men's Black Sunglasses",
+      "description": "Black sunglasses. Brand new with box",
+      "price": 51.00,
+      "colors": ["#151507"],
+      "categoryId": 3,
+      "imageFront": "https://media-photos.depop.com/b1/45142106/1784649445_cf9e6421185349c0a05cdd46f9a51d3b/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/45142106/1784649483_adeaa3192dfc4d33b0ea320ec75dcb09/P0.jpg",
+      "condition": "Used",
+      "brand": "Prada"
+    }
+    ,
+    {
+      "id": "3",
+      "name": "Men's Blue and Black T-shirt",
+      "description": "Inter Milan Soccer Jersey",
+      "price": 30,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 61
+        },
+        {
+          "size": "M",
+          "stock": 32
+        },
+        {
+          "size": "L",
+          "stock": 33
+        },
+        {
+          "size": "XL",
+          "stock": 19
+        }
+      ],
+      "colors": ["#161a2e", "#003ebf"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/33306378/1785585293_0cb413c7a71849f0bce953b8f443e88f/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/33306378/1785585333_b85e0b286f6d4f5d9ae0eb6e8785d166/P0.jpg",
+      "condition": "Used",
+      "brand": "Other"
     },
     {
-      "id": "345c",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "4",
+      "name": "Speechless Women's Cream Dress",
+      "description": "Off-White Prom Dress",
+      "price": 25.00,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 3
+        },
+        {
+          "size": "XL",
+          "stock": 12
+        }
+      ],
+      "colors": ["#e1dad5"],
+      "categoryId": 4,
+      "imageFront": "https://media-photos.depop.com/b1/46320359/1788048331_eb84825d25fa464592fcaf86fe7296fe/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/46320359/1788048366_0a4cbdaf42d7476bb6ece63f6e625330/P0.jpg",
+      "condition": "Used",
+      "brand": "Speechless"
     },
     {
-      "id": "ee85",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "21",
+      "name": "Converse Women's White Trainers",
+      "description": "White Platform Converse size women 8.5 Originally $80 Selling $50 Worn twice! 🤍🤍🤍 In amazing condition still. Tiny mark on rubber, can easily be removed with a magic eraser",
+      "price": 50.00,
+      "sizes": [
+        {
+          "size": "US 8.5",
+          "stock": 11
+        },
+        {
+          "size": "US 10",
+          "stock": 32
+        }
+      ],
+      "colors": ["#cbced1"],
+      "categoryId": 2,
+      "imageFront": "https://media-photos.depop.com/b1/37353417/1788792451_66da716ce538454db4924670f1c1a9f8/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/37353417/1788792574_a41ecf7cc2aa4170be763dc81a099046/P0.jpg",
+      "condition": "Used",
+      "brand": "Converse"
+    }
+    ,
+    {
+      "id": "6",
+      "name": "Adidas Women's Black and Green Top",
+      "description": "Manchester united soccer jersey - super sick coloring",
+      "price": 40,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 15
+        },
+        {
+          "size": "M",
+          "stock": 32
+        },
+        {
+          "size": "L",
+          "stock": 12
+        }
+      ],
+      "colors": ["#171516"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/46723312/1785683026_fdb9ea31a2cd4ec982bd2381a0fd3484/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/46723312/1785683097_4a501eb3a0a04841a3ab03a5ba5ac913/P0.jpg",
+      "condition": "Like New",
+      "brand": "Adidas"
     },
     {
-      "id": "a534",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "7",
+      "name": "Men's Brown and White T-shirt",
+      "description": "Spurs 23/24 Away Brown Soccer JerseyBrand New Size Medium",
+      "price": 34.2,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 14
+        },
+        {
+          "size": "L",
+          "stock": 32
+        },
+        {
+          "size": "XL",
+          "stock": 21
+        }
+      ],
+      "colors": ["#695653", "#262a31"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/32918387/1782607447_485455adf35f4b0798b75d7ef7fa02bb/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/32918387/1782607516_53ddcee3e6ff4e178cd01f668b054b0c/P0.jpg",
+      "condition": "Brand New",
+      "brand": "Other"
     },
     {
-      "id": "1a02",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "8",
+      "name": "Men's T-shirt",
+      "description": "Vintage FC Bayern Munich Mario Gotze Long Sleeve 🥾 Soccer Jersey. No Size Tag. Fits Like a Medium",
+      "price": 20,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 41
+        },
+        {
+          "size": "XL",
+          "stock": 9
+        }
+      ],
+      "colors": ["#ee0004"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/9847507/1784268597_3c1a2273632d475b90932ba12cd45a08/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/9847507/1784268648_df32ca8c1e7f423d8228ed5e0bb04fa1/P0.jpg",
+      "condition": "Used",
+      "brand": "Other"
     },
     {
-      "id": "9a50",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "9",
+      "name": "American Vintage Women's Black Dress",
+      "description": "Absolutely gorgeous Sharon Tate 60s mini baby doll dress. This black mini is lightweight and fits as a M/L! Perfect for that upcoming prom!",
+      "price": 30.00,
+      "sizes": [
+        {
+          "size": "M",
+          "stock": 37
+        }
+      ],
+      "colors": ["#191b29"],
+      "categoryId": 4,
+      "imageFront": "https://media-photos.depop.com/b1/9213807/1788998057_3dae300a08114f01bd5eeb32249b9a27/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/9213807/1788998076_d93e974490cd451980a5a65afc27e3bc/P0.jpg",
+      "condition": "Used",
+      "brand": "American Vintage"
     },
     {
-      "id": "9147",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "10",
+      "name": "Adidas Men's White Trainers",
+      "description": "NWT Adidas sambas, mens 7.5 women’s size 9!",
+      "price": 90.00,
+      "sizes": [
+        {
+          "size": "US 7.5",
+          "stock": 62
+        },
+        {
+          "size": "US 9",
+          "stock": 35
+        },
+        {
+          "size": "US 10.5",
+          "stock": 103
+        }
+      ],
+      "colors": ["#eef3f4", "#3f4443"],
+      "categoryId": 2,
+      "imageFront": "https://media-photos.depop.com/b1/3718017/1788790783_02dc21ba1c014645bd218799c2ba898c/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/3718017/1788790926_082183ad472c4273b3a6c94aa32e6172/P0.jpg",
+      "condition": "Brand New",
+      "brand": "Adidas"
     },
     {
-      "id": "82c3",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "11",
+      "name": "Women's Black Sunglasses",
+      "description": "90s style small black sunglasses | black retro oval sunglasses | slim oval black sunglasses / 90s black sunglasses",
+      "price": 14.99,
+      "colors": ["#0c1923"],
+      "categoryId": 3,
+      "imageFront": "https://media-photos.depop.com/b1/25769681/1781452207_28424ea461cc48098a68ec99c28d564b/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/25769681/1781451581_9d200ff3d4c34e5aa94e52da09e51680/P0.jpg",
+      "condition": "Used",
+      "brand": "ASOS"
     },
     {
-      "id": "5153",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "12",
+      "name": "ASOS Women's Dress",
+      "description": "ASOS Prom dress size 4. Worn once.",
+      "price": 40.00,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 55
+        },
+        {
+          "size": "M",
+          "stock": 32
+        }
+      ],
+      "colors": ["#43010c", "#816365"],
+      "categoryId": 4,
+      "imageFront": "https://media-photos.depop.com/b1/32829490/1788864314_3c758510b4a14447b310c283fe2d5b2c/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/32829490/1788865043_62b12e135ea045c7981857d6fe2c977e/P0.jpg",
+      "condition": "Used",
+      "brand": "ASOS"
     },
     {
-      "id": "b54a",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "13",
+      "name": "Adidas Men's Pink Top",
+      "description": "Real Madrid Pink Jersey 2014/15 Away Season Long Sleeve With UCL Patches Ronaldo 7 on the back New With Tags (Tag Fell Off) Size M",
+      "price": 57,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 14
+        },
+        {
+          "size": "M",
+          "stock": 23
+        },
+        {
+          "size": "L",
+          "stock": 55
+        },
+        {
+          "size": "XL",
+          "stock": 32
+        }
+      ],
+      "colors": ["#d61051"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/44261714/1739000059_e2744bf38f2f4e03a339fbcf5143e3dd/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/44261714/1739000234_31d72fe6cd7f469c86f998d13e763981/P0.jpg",
+      "condition": "Brand New",
+      "brand": "Adidas"
     },
     {
-      "id": "4f0f",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "14",
+      "name": "Tillys Women's Pink and Gold Sunglasses",
+      "description": "fuchsia drippy fun sunglasses, never worn",
+      "price": 4.00,
+      "colors": ["#8c398f"],
+      "categoryId": 3,
+      "imageFront": "https://media-photos.depop.com/b1/45877674/1789199970_22ef6f90b3f047b19cb33a880cec32b5/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/45877674/1789200037_215a1bd7772c4524878b603d28c0face/P0.jpg",
+      "condition": "Like New",
+      "brand": "Tillys"
     },
     {
-      "id": "fb9c",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "15",
+      "name": "Adidas Men's T-shirt",
+      "description": "Vintage Adidas Real Madrid Soccer Jersey Size Large",
+      "price": 25,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 8
+        },
+        {
+          "size": "M",
+          "stock": 31
+        },
+        {
+          "size": "L",
+          "stock": 22
+        },
+        {
+          "size": "XL",
+          "stock": 16
+        }
+      ],
+      "colors": ["#3d3a60", "#d4cbb7"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/9847507/1785316349_290a65f809b94e539f2fd6ec6fbf6168/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/9847507/1785316419_14e84590e1d5435fb6dc3452a0f3180a/P0.jpg",
+      "condition": "Used",
+      "brand": "Adidas"
     },
     {
-      "id": "b0d4",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "16",
+      "name": "Nike Men's Black Trainers",
+      "description": "Men’s Nike skateboarding shoes size 10 mens in good condition has some wear and very light discoloration but nothing crazy!! Love the design and simplicity of it! Reminds me of sambas!",
+      "price": 25.00,
+      "sizes": [
+        {
+          "size": "US 10",
+          "stock": 12
+        }
+      ],
+      "colors": ["#080d0e", "#786742"],
+      "categoryId": 2,
+      "imageFront": "https://media-photos.depop.com/b1/31061989/1787863342_ce48f7c7e4ba4c9c819c7b0c28fc7e90/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/31061989/1787863377_7aa0fe9630204908acfc72b0a66477ab/P0.jpg",
+      "condition": "Used",
+      "brand": "Nike"
     },
     {
-      "id": "358b",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "17",
+      "name": "Urban Outfitters Men's Black and Yellow Sunglasses",
+      "description": "black rectangle sunglasses from urbanoutfitters. yellow tint.",
+      "price": 13.00,
+      "colors": ["#b19e5a", "#0b0c06"],
+      "categoryId": 3,
+      "imageFront": "https://media-photos.depop.com/b1/1012541/1779991103_658ad71b938f48b1ba71cc06385a9d78/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/1012541/1779991102_0a7ed45010134b1594ec47cb15cccc80/P0.jpg",
+      "condition": "Used",
+      "brand": "Urban Outfitters"
     },
     {
-      "id": "13f4",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "18",
+      "name": "Adidas Women's Black Trainers",
+      "description": "CURRENTLY ON HOLD‼️‼️ ADIDAS GAZELLES SZ 5.5 mens/7 womens Worn a few times, in great shape",
+      "price": 30.00,
+      "sizes": [
+        {
+          "size": "US 10.5",
+          "stock": 13
+        }
+      ],
+      "colors": ["#d3d2cc", "#171c1d"],
+      "categoryId": 2,
+      "imageFront": "https://media-photos.depop.com/b1/43061355/1787710269_8148197d51d84a239144133b4d0d5bf4/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/43061355/1787710317_5a04d9137149437aa7a5b84b9a410657/P0.jpg",
+      "condition": "Used",
+      "brand": "Adidas"
     },
     {
-      "id": "4fe1",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "19",
+      "name": "Nike Men's Red T-shirt",
+      "description": "Portugal football (soccer) jersey/kit",
+      "price": 13.6,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 3
+        },
+        {
+          "size": "M",
+          "stock": 7
+        },
+        {
+          "size": "L",
+          "stock": 11
+        },
+        {
+          "size": "XL",
+          "stock": 21
+        }
+      ],
+      "colors": ["#d84068", "#f0002c"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/11706637/1782361488_01735ac9224f4ed2856780c8b4a052ef/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/11706637/1782361672_562e5ef8da0a46b58889e6cddeaf561f/P0.jpg",
+      "condition": "Used",
+      "brand": "Nike"
     },
     {
-      "id": "0deb",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
+      "id": "20",
+      "name": "Onitsuka Tiger Men's Grey Trainers",
+      "description": "Grey onitsuka tiger, size 9.5 mens, good condition some wear but still in completely wearable condition.",
+      "price": 45.00,
+      "sizes": [
+        {
+          "size": "US 9.5",
+          "stock": 22
+        }
+      ],
+      "colors": ["#d5d6d8"],
+      "categoryId": 2,
+      "imageFront": "https://media-photos.depop.com/b1/42316193/1787053923_09247c222a754cc2ad7a117d2d2b7fce/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/42316193/1787053941_58b88b55a8c74f3db691c18c959725b5/P0.jpg",
+      "condition": "Used",
+      "brand": "Onitsuka Tiger"
     },
     {
-      "id": "01e4",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "4231",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "d860",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "0b10",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "8fd3",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "4c02",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "3158",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "ae27",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "68f1",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "c5e5",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "4ebf",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "6eb2",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "6197",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "f977",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "95ab",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123123",
-      "password": "abc123123"
-    },
-    {
-      "id": "3125",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "abc123",
-      "password": "abc123"
-    },
-    {
-      "id": "d322",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "asasaasasa",
-      "password": "asasasa"
-    },
-    {
-      "id": "f3cf",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "ryan01",
-      "password": "abc123"
-    },
-    {
-      "id": "a076",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "ryan01",
-      "password": "abc123"
-    },
-    {
-      "id": "680b",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "ryan01",
-      "password": "abc123"
-    },
-    {
-      "id": "cd0f",
-      "firstName": "Ryan",
-      "lastName": "Defryan",
-      "email": "ryan@gmail.com",
-      "username": "ryan01",
-      "password": "abc123"
+      "id": "5",
+      "name": "Adidas Men's multi Top",
+      "description": "AC Milan 2009/10 Retro RONALDINHO # 80 Soccer Home Jersey Size",
+      "price": 52.5,
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 12
+        },
+        {
+          "size": "M",
+          "stock": 5
+        },
+        {
+          "size": "L",
+          "stock": 22
+        },
+        {
+          "size": "XL",
+          "stock": 11
+        }
+      ],
+      "colors": ["#111619", "#bb1b40"],
+      "categoryId": 1,
+      "imageFront": "https://media-photos.depop.com/b1/36972661/1778896801_7cef7649d89e40679a0dcc01a4064d73/P0.jpg",
+      "imageBack": "https://media-photos.depop.com/b1/36972661/1778896829_4ea5e5bd4c7f43cfbc0fa26bcd853902/P0.jpg",
+      "condition": "Like New",
+      "brand": "Adidas"
     }
   ]
 }
