@@ -11,7 +11,7 @@ export default function Navbar(){
     console.log(userData)
     
     return(
-        <div className="fixed w-full bg-white">
+        <div className="fixed w-full bg-white z-10">
             <div className="flex items-center bg-base-100 px-10 py-2">
                 {/* Div Left */}
                 <div className="flex-1 flex items-center gap-3">
