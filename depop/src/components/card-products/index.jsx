@@ -11,9 +11,7 @@ const CardProducts = ({
                 <div className="relative w-full h-[300px] bg-red-100">
                     <img 
                         src={image}
-                        width={'100%'}
-                        height={'100%'}
-                        className="max-w-full min-h-full object-cover"
+                        className="w-full h-full max-w-full min-h-full object-cover"
                     />
                     <CiHeart 
                         color='white'

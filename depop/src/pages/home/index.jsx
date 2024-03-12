@@ -1,7 +1,8 @@
 import { LiaSortSolid } from "react-icons/lia";
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import CardProducts from "../../components/CardProducts";
+import CardProducts from "../../components/card-products";
+import { Link } from 'react-router-dom';
 
 export default function HomePage(){
 
@@ -78,13 +79,15 @@ export default function HomePage(){
                     products.map((product, index) => {
                         return(
                             <div key={index} className="col-span-3">
-                            <CardProducts 
-                                key={index}
-                                image={product.imageFront}
-                                price={product.price}
-                                brand={product.brand}
-                                size={product.sizes}
-                            />
+                                <Link to={`/product-detail/${product.id}`}>
+                                    <CardProducts 
+                                        key={index}
+                                        image={product.imageFront}
+                                        price={product.price}
+                                        brand={product.brand}
+                                        size={product.sizes}
+                                    />
+                                </Link>
                             </div>
                         )
                     })
