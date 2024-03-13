@@ -1,15 +1,34 @@
 import { CiSearch, CiHeart, CiMenuBurger  } from "react-icons/ci";
 import { IoBagOutline } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { userContext } from "../../supports/context/useUserContext";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 export default function Navbar(){
     const route = useLocation()
+    const {setUserData} = useContext(userContext)
     const {userData} = useContext(userContext)
-    console.log('This is Navbar')
-    console.log(userData)
+
+    const handleKeepLogin = async() => {
+        try {
+            let usersData = localStorage.getItem('dataUser')
+            usersData = JSON.parse(usersData)
+
+            const res = await axios.get(`http://localhost:5000/users/${usersData.id}`)
+            setUserData({
+                id: res.data.id,
+                username: res.data.username
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        handleKeepLogin()
+    }, [])
     
     return(
         <div className="fixed w-full bg-white z-10">
@@ -56,7 +75,7 @@ export default function Navbar(){
                         Sell Now
                 </button>
                 {
-                    userData?.username !== null?
+                    userData !== null?
                         userData?.username
                     :
                         <>

@@ -27,6 +27,10 @@ export default function LoginPage(){
                 id: findEmail.data[0].id, 
                 username: findEmail.data[0].username
             })
+            localStorage.setItem('dataUser', JSON.stringify({
+                id: findEmail.data[0].id, 
+                username: findEmail.data[0].username
+            }))
         } catch (error) {
             toast.error(error.message)
         } finally {
