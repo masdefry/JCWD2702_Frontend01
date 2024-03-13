@@ -23,7 +23,10 @@ export default function LoginPage(){
             if(findEmail.data.length === 0) throw new Error('Login Failed!')
             console.log(findEmail.data[0].username)
             toast.success('Login Success')
-            setUserData(findEmail.data[0].username)
+            setUserData({
+                id: findEmail.data[0].id, 
+                username: findEmail.data[0].username
+            })
         } catch (error) {
             toast.error(error.message)
         } finally {

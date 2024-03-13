@@ -3,6 +3,7 @@ import { IoBagOutline } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { userContext } from "../../supports/context/useUserContext";
+import { Link } from "react-router-dom";
 
 export default function Navbar(){
     const route = useLocation()
@@ -23,11 +24,13 @@ export default function Navbar(){
                         className="block lg:hidden"
                         size={30}
                     />
-                    <img
-                        src="/DepopLogo.svg" 
-                        width={100}
-                        height={70}
-                    />
+                    <Link to='/'>
+                        <img
+                            src="/DepopLogo.svg" 
+                            width={100}
+                            height={70}
+                        />
+                    </Link>
                 </div>
                 {/* Div Center */}
                 <div className={`flex-1 hidden lg:${route.pathname === '/login'? 'hidden' : 'block'}`}>
@@ -53,8 +56,8 @@ export default function Navbar(){
                         Sell Now
                 </button>
                 {
-                    userData !== null?
-                        userData
+                    userData?.username !== null?
+                        userData?.username
                     :
                         <>
                             <button className="btn rounded-none bg-black text-white hover:bg-gray-500 lg:bg-white lg:text-black border border-black hover:border-black">

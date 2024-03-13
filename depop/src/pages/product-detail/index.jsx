@@ -3,11 +3,16 @@ import { MdOutlineVerifiedUser } from "react-icons/md";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loading from "../../components/cores/Loading";
+import { useContext } from "react";
+import { userContext } from "../../supports/context/useUserContext";
+import { toast } from 'react-toastify';
 
 export default function ProductDetailPage() {
   const params = useParams()
   const [product, setProduct] = useState(null)
   const [selectedSize, setSelectedSize]= useState(null)
+  const [quantity, setQuantity] = useState(1)
+  const {userData} = useContext(userContext)
  
   const onFetchProduct = async() => {
     try {
@@ -15,6 +20,21 @@ export default function ProductDetailPage() {
       setProduct(res.data)
     } catch (error) {
       console.log(error)
+    }
+  }
+
+  const onHandleAddToCart = async() => {
+    try {
+      if(selectedSize === null) throw new Error('Select Size First!')
+      await axios.post('http://localhost:5000/carts', {
+        userId: userData.id, 
+        productId: product.id,
+        quantity,
+      })
+
+      toast.success('Add to Cart Success!')
+    } catch (error) {
+      toast.error(error.message)
     }
   }
 
@@ -39,13 +59,29 @@ export default function ProductDetailPage() {
               {product?.name}
             </p>
             <p className="text-xl font-bold">Rp {product.price}</p>
-            <p className="py-5">
-              {product.stock}
-              {selectedSize === null?
-                null
-                :
-                <>Size {selectedSize.size}: Stock {selectedSize.stock} -</>
-              } Used - Excellent -{" "}
+            <div className="flex justify-between">
+              <p className="text-red-500 font-bold">
+                {product.stock}
+                {selectedSize === null?
+                  null
+                  :
+                  <>Size {selectedSize.size}: Stock {selectedSize.stock}</>
+                } 
+              </p>
+              <div className="flex gap-3 items-center">
+                <button onClick={() => setQuantity(quantity - 1)} disabled={quantity === 1? true : false} className="bg-black text-white border border-black w-[35px] h-[35px] rounded-none font-bold flex items-center justify-center">
+                  -
+                </button>
+                <p className="font-bold text-xl">
+                  {quantity}
+                </p>
+                <button onClick={() => setQuantity(quantity + 1)} disabled={selectedSize?.stock === quantity? true : false} className="bg-black text-white border border-black w-[35px] h-[35px] rounded-none font-bold flex items-center justify-center">
+                  + 
+                </button>
+              </div>
+            </div>
+            <p>
+              Used - Excellent -{" "}
               <span>
                 <u>Wild Fable</u>
               </span>
@@ -53,7 +89,7 @@ export default function ProductDetailPage() {
             {
               product?.sizes?.length?
                 <div className="dropdown w-full">
-                  <div tabIndex={0} role="button" className="btn rounded-sm border border-black m-1 w-full">{selectedSize?.size? selectedSize?.size : 'Sizes'}</div>
+                  <div tabIndex={0} role="button" className="btn rounded-sm border border-black m-1 w-full">{selectedSize?.size? selectedSize?.size : 'Select Your Size'}</div>
                   <ul tabIndex={0} className="dropdown-content z-[1] p-2 w-full shadow bg-base-100 rounded-sm w-52">
                       {
                         product?.sizes?.map((size, index) => {
@@ -73,10 +109,7 @@ export default function ProductDetailPage() {
                 null
             }
             <div className="flex flex-col gap-2 items-center ml-1 mt-1 w-full">
-              <button className="btn w-full rounded-none bg-black text-white border-2 border-black hover:bg-red-500 hover:border-red-500 text-[15px] tracking-wide">
-                Buy Now
-              </button>
-              <button className="btn w-full bg-white rounded-none border-2 border-black ext-[15px] tracking-wide hover:border-black">
+              <button onClick={onHandleAddToCart} className="btn w-full rounded-none bg-black text-white border-2 border-black hover:bg-red-500 hover:border-red-500 text-[15px] tracking-wide">
                 Add to Bag
               </button>
             </div>
