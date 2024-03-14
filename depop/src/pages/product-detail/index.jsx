@@ -6,6 +6,7 @@ import Loading from "../../components/cores/Loading";
 import { useContext } from "react";
 import { userContext } from "../../supports/context/useUserContext";
 import { toast } from 'react-toastify';
+import { cartContext } from './../../supports/context/useCartContext';
 
 export default function ProductDetailPage() {
   const params = useParams()
@@ -13,7 +14,8 @@ export default function ProductDetailPage() {
   const [selectedSize, setSelectedSize]= useState(null)
   const [quantity, setQuantity] = useState(1)
   const {userData} = useContext(userContext)
- 
+  const {setCartData} = useContext(cartContext)
+
   const onFetchProduct = async() => {
     try {
       const res = await axios.get(`http://localhost:5000/products/${params?.productId}`)
@@ -26,12 +28,29 @@ export default function ProductDetailPage() {
   const onHandleAddToCart = async() => {
     try {
       if(selectedSize === null) throw new Error('Select Size First!')
-      await axios.post('http://localhost:5000/carts', {
-        userId: userData.id, 
-        productId: product.id,
-        quantity,
-      })
+      
+      const checkProductExist = await axios.get(`http://localhost:5000/carts?productId=${product.id}&userId=${userData.id}&size=${selectedSize.size}`)
+      if(checkProductExist.data.length === 0){
+        console.log('???')
+        await axios.post('http://localhost:5000/carts', {
+          userId: userData.id, 
+          productId: product.id,
+          quantity,
+          size: selectedSize.size
+        })
+      }else{
+        const currentQuantity = checkProductExist.data[0].quantity 
+        const newQuantity = currentQuantity + quantity
+        
+        if(newQuantity > selectedSize.stock) return toast.error('Out of Stock')
+        
+        await axios.patch(`http://localhost:5000/carts/${checkProductExist.data[0].id}`, {
+          quantity: newQuantity
+        })
+      }
 
+      const findCartUser = await axios.get(`http://localhost:5000/carts?userId=${userData.id}`)
+      setCartData(findCartUser.data.length)
       toast.success('Add to Cart Success!')
     } catch (error) {
       toast.error(error.message)

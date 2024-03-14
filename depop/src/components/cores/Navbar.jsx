@@ -5,10 +5,23 @@ import { useContext, useEffect } from "react";
 import { userContext } from "../../supports/context/useUserContext";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import { cartContext } from './../../supports/context/useCartContext';
 
 export default function Navbar(){
     const route = useLocation()
     const {userData, setUserData} = useContext(userContext)
+    const {cartData, setCartData} = useContext(cartContext)
+    
+    const handleKeepNotifCart = async() => {
+        try {
+            let usersData = localStorage.getItem('dataUser')
+            usersData = JSON.parse(usersData)
+            const findCartUser = await axios.get(`http://localhost:5000/carts?userId=${usersData.id}`)
+            setCartData(findCartUser.data.length)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const handleKeepLogin = async() => {
         try {
@@ -25,8 +38,9 @@ export default function Navbar(){
         }
     }
 
-    useEffect(() => {
-        handleKeepLogin()
+    useEffect(async() => {
+        await handleKeepLogin()
+        await handleKeepNotifCart()
     }, [])
     
     return(
@@ -65,10 +79,13 @@ export default function Navbar(){
                         className="hover:text-gray-500"
                     />
                 </div>
-                <div className="hover:text-gray-500">
+                <div className="hover:text-gray-500 relative">
                     <IoBagOutline 
                         size={30}
                     />
+                    <div className="absolute top-0 right-0 mr-[-10px] bg-red-500 text-white rounded-full px-2">
+                    {cartData}
+                    </div>
                 </div>
                 <button className="btn rounded-none bg-black text-white hover:bg-gray-500 hidden lg:block">
                         Sell Now

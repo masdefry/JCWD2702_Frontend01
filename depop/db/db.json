@@ -550,28 +550,25 @@
   ],
   "carts": [
     {
-      "id": "fd04",
+      "id": "744c",
       "userId": "ac2c",
       "productId": "3",
-      "quantity": 1
+      "quantity": 19,
+      "size": "XL"
     },
     {
-      "id": "9e51",
+      "id": "f03f",
       "userId": "ac2c",
       "productId": "3",
-      "quantity": 1
+      "quantity": 9,
+      "size": "S"
     },
     {
-      "id": "07c4",
+      "id": "14c5",
       "userId": "ac2c",
       "productId": "3",
-      "quantity": 1
-    },
-    {
-      "id": "7afd",
-      "userId": "ac2c",
-      "productId": "3",
-      "quantity": 1
+      "quantity": 1,
+      "size": "L"
     }
   ]
 }
