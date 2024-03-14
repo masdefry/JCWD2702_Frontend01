@@ -8,8 +8,7 @@ import axios from 'axios';
 
 export default function Navbar(){
     const route = useLocation()
-    const {setUserData} = useContext(userContext)
-    const {userData} = useContext(userContext)
+    const {userData, setUserData} = useContext(userContext)
 
     const handleKeepLogin = async() => {
         try {

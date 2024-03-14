@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import CardProducts from "../../components/card-products";
 import { Link } from 'react-router-dom';
+import Bebas from "../../components/Bebas";
 
 export default function HomePage(){
 
