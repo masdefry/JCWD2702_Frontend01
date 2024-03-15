@@ -82,10 +82,10 @@ export default async function FetchingPatternPage(){
             <h5
                 className="bg-red-500"
             >
-                {JSON.stringify(posts).slice(0, 100)}
+                <UserComponent />
             </h5>
             <Suspense fallback={'<h1>Loading...</h1>'}>
-                <UserComponent />
+                {JSON.stringify(posts).slice(0, 100)}
             </Suspense>
         </div>
     )
