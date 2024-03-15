@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "id": 1, 
+            "name": "Sepatu",
+            "price": 10000, 
+            "description": "Ini Sepatu"
+        },
+        {
+            "id": 2, 
+            "name": "Kaos",
+            "price": 10000, 
+            "description": "Ini Kaos"
+        },
+        {
+            "id": 3, 
+            "name": "Kaos",
+            "price": 10000, 
+            "description": "Ini Kaos"
+        },
+        {
+            "id": 3, 
+            "name": "Kaos",
+            "price": 10000, 
+            "description": "Ini Kaos"
+        }
+    ]
+}
