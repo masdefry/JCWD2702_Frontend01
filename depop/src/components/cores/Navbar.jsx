@@ -38,9 +38,9 @@ export default function Navbar(){
         }
     }
 
-    useEffect(async() => {
-        await handleKeepLogin()
-        await handleKeepNotifCart()
+    useEffect(() => {
+        handleKeepLogin()
+        handleKeepNotifCart()
     }, [])
     
     return(
