@@ -52,7 +52,7 @@
 //     )
 // }
 
-import { Suspense } from "react"
+import { Suspense } from 'react'
 import UserComponent from "./UserComponent"
 
 const onFetchPosts = async() => {
